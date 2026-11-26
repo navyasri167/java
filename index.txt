@@ -1,0 +1,14 @@
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+# Update package lists
+RUN apt-get update
+
+# Install basic utilities
+RUN apt-get install -y curl vim
+
+# Set the working directory
+WORKDIR /app
+
+# Display a message when the container starts
+CMD ["echo", "Hello from Ubuntu Docker Container!"]
